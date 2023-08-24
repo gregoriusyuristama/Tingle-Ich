@@ -12,21 +12,31 @@ struct CrownView: View {
     
     var body: some View {
         GeometryReader { geo in
-            VStack {
-                Spacer()
-                HStack {
+            ZStack {
+                VStack {
                     Spacer()
-                    Image("1")
+                    Image("windmill_stick")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: geo.size.width * 0.5)
-                        .cornerRadius(16)
-                        .focusable(true)
-                        .rotationEffect(Angle(degrees: scrollAmount))
-                        .digitalCrownRotation($scrollAmount, from: 1, through: 360, by: 15.0, sensitivity: .high, isContinuous: true, isHapticFeedbackEnabled: true)
+                        .frame(height: geo.size.height * 0.5)
+                }
+                
+                VStack {
+                    HStack {
+                        Spacer()
+                        Image("windmill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: geo.size.width * 0.80)
+                            .cornerRadius(16)
+                            .focusable(true)
+                            .rotationEffect(Angle(degrees: scrollAmount))
+                            .digitalCrownRotation($scrollAmount, from: 1, through: 360, by: 15.0, sensitivity: .high, isContinuous: true, isHapticFeedbackEnabled: true)
+                        Spacer()
+                    }
+                    .padding(.top, 25)
                     Spacer()
                 }
-                Spacer()
             }
         }
         .ignoresSafeArea()
