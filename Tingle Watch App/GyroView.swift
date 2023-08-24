@@ -63,10 +63,6 @@ struct GyroView: View {
             circleY = radiusY * CGFloat(cos(tiltAngle  * .pi / 180) * abs(accData * 0.8))
         }
         
-        
-        
-        print(accData)
-        
         return CGPoint(x: circleX, y: circleY)
     }
 }

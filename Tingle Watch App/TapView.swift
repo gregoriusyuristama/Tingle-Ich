@@ -11,17 +11,35 @@ struct TapView: View {
     @State private var rectangleSize: CGSize = CGSize(width: 50, height: 50)
     @State private var isTimerRunning = false
     
+    private var arrImagesName = [
+        "Emoji1",
+        "Emoji2",
+        "Emoji3",
+        "Emoji4",
+        "Emoji5",
+        "Emoji6",
+        "Emoji7",
+        "Emoji8",
+        "Emoji9",
+        "Emoji10",
+    ]
+    @State private var counter: Int = 0
+    
     var body: some View {
-        Rectangle()
+        
+        Image(arrImagesName[counter])
+            .resizable()
             .frame(width: rectangleSize.width, height: rectangleSize.height)
             .foregroundColor(Color.blue)
             .onAppear {
                 startTimer()
             }
             .onTapGesture {
-                resetTimer()
+                //                resetTimer()
                 withAnimation {
                     playHapticPattern()
+                    guard counter + 2 < 10 else { return }
+                    counter += 2
                     rectangleSize = CGSize(width: rectangleSize.width + 20, height: rectangleSize.height + 20)
                 }
             }
@@ -42,6 +60,8 @@ struct TapView: View {
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             if rectangleSize.width > 50 {
                 withAnimation {
+                    guard counter - 1 > 0 else { return }
+                    counter -= 1
                     rectangleSize = CGSize(width: rectangleSize.width - 10, height: rectangleSize.height - 10)
                     playHapticPattern()
                 }
