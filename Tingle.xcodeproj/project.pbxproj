@@ -14,6 +14,7 @@
 		3DBABE1B2A970DFC008885B9 /* CrownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBABE1A2A970DFC008885B9 /* CrownView.swift */; };
 		3DBABE1D2A970E0D008885B9 /* GyroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBABE1C2A970E0D008885B9 /* GyroView.swift */; };
 		3DBABE1F2A970E26008885B9 /* TapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBABE1E2A970E26008885B9 /* TapView.swift */; };
+		B6C556FE2A976FF300A6C55C /* SeeSaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C556FD2A976FF300A6C55C /* SeeSaw.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		3DBABE1A2A970DFC008885B9 /* CrownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrownView.swift; sourceTree = "<group>"; };
 		3DBABE1C2A970E0D008885B9 /* GyroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyroView.swift; sourceTree = "<group>"; };
 		3DBABE1E2A970E26008885B9 /* TapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapView.swift; sourceTree = "<group>"; };
+		B6C556FD2A976FF300A6C55C /* SeeSaw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeSaw.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		3DBABE0B2A970D2D008885B9 /* Tingle Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				B6C556FC2A976FD400A6C55C /* Gyro */,
 				3DBABE0C2A970D2D008885B9 /* TingleApp.swift */,
 				3DBABE0E2A970D2D008885B9 /* ContentView.swift */,
 				3DBABE1A2A970DFC008885B9 /* CrownView.swift */,
@@ -74,6 +77,14 @@
 				3DBABE132A970D2E008885B9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B6C556FC2A976FD400A6C55C /* Gyro */ = {
+			isa = PBXGroup;
+			children = (
+				B6C556FD2A976FF300A6C55C /* SeeSaw.swift */,
+			);
+			path = Gyro;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 				3DBABE1F2A970E26008885B9 /* TapView.swift in Sources */,
 				3DBABE1B2A970DFC008885B9 /* CrownView.swift in Sources */,
 				3DBABE0D2A970D2D008885B9 /* TingleApp.swift in Sources */,
+				B6C556FE2A976FF300A6C55C /* SeeSaw.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +286,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tingle Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = ZVGYNW47J9;
+				DEVELOPMENT_TEAM = U43A7X58YW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Tingle;
@@ -304,7 +316,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Tingle Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = ZVGYNW47J9;
+				DEVELOPMENT_TEAM = U43A7X58YW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Tingle;
